@@ -1,13 +1,16 @@
 package de.noack.artificial.sl4.model;
 
-import java.util.Set;
-
 public class Synapse {
 
 	private Axon parentAxon;
-	private Set<Neuron> contactedNeurons;
+	private Neuron contactedNeuron;
 
-	public void affectNeurons() {
+	public Synapse(Axon parentAxon, Neuron contactedNeuron) {
+		this.parentAxon = parentAxon;
+		this.contactedNeuron = contactedNeuron;
+	}
 
+	public void affectNeuron(double signal) {
+		contactedNeuron.getSoma().getRandomDendrit().receiveInputSignal(signal);
 	}
 }

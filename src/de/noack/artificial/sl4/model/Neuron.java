@@ -5,32 +5,23 @@ package de.noack.artificial.sl4.model;
  */
 public class Neuron {
 
-	private State state;
-	private Soma childSoma;
+	private double state; // Zwischen 0 und 1
+	private Soma soma;
 	private Axon axon;
-	private double effectivity;
 	private int layer;
 
-	public Neuron(State state, Soma childSoma, Axon axon, int layer) {
-		this.state = state;
-		this.childSoma = childSoma;
-		this.axon = axon;
+	public Neuron(int layer, double threshold) {
+		state = 0;
+		this.soma = new Soma(this, threshold);
+		this.axon = new Axon();
 		this.layer = layer;
 	}
 
-	public void sendSignalIfThresholdExceeded() {
-		if(childSoma.sumOfWeightsExceedsThreshold()) axon.sendSignal();
+	public void sendSignalIfThresholdExceeded(double signal) {
+		if(soma.sumOfWeightsExceedsThreshold()) axon.sendSignal(signal);
 	}
 
-	public State getState() {
-		return state;
-	}
-
-	public Soma getChildSoma() {
-		return childSoma;
-	}
-
-	public Axon getAxon() {
-		return axon;
+	public Soma getSoma() {
+		return soma;
 	}
 }

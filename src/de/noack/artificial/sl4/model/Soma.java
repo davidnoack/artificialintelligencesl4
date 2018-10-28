@@ -1,5 +1,7 @@
 package de.noack.artificial.sl4.model;
 
+import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 public class Soma {
@@ -9,10 +11,12 @@ public class Soma {
 	private double sumOfWeights;
 	private double threshold;
 
-	public Soma(Neuron parentNeuron, Set <Dendrit> dendrits, double sumOfWeights, double threshold) {
+	public Soma(Neuron parentNeuron, double threshold) {
 		this.parentNeuron = parentNeuron;
-		this.dendrits = dendrits;
-		this.sumOfWeights = sumOfWeights;
+		this.dendrits = new HashSet <>();
+		Dendrit dendrit = new Dendrit(this);
+		dendrits.add(dendrit);
+		this.sumOfWeights = 0;
 		this.threshold = threshold;
 	}
 
@@ -26,19 +30,11 @@ public class Soma {
 		return sumOfWeights > threshold;
 	}
 
-	public Neuron getParentNeuron() {
-		return parentNeuron;
-	}
-
-	public Set <Dendrit> getDendrits() {
-		return dendrits;
+	public Dendrit getRandomDendrit() {
+		return (Dendrit) dendrits.toArray()[new Random().nextInt(dendrits.size())];
 	}
 
 	public double getSumOfWeights() {
 		return sumOfWeights;
-	}
-
-	public double getThreshold() {
-		return threshold;
 	}
 }
