@@ -1,10 +1,13 @@
 package de.noack.artificial.sl4.gui;
 
+import de.noack.artificial.sl4.logic.Controller;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -12,30 +15,62 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-	Stage window;
+	private Stage window;
+	private Label resultLabel = new Label("");
+	GridPane gridPane = new GridPane();
+	private int a = 0;
+	private int b = 0;
 
 	public static void main(String[] args) {
 		launch(args);
 	}
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
-		window = primaryStage;
-		window.setTitle("Neuronal Network");
+	public void start(Stage primaryStage) {
 
-		GridPane gridPane = new GridPane();
+		window = primaryStage;
+		window.setTitle("XOR");
+
 		gridPane.add(createLabel("Choose Input A:"), 0, 0);
 		gridPane.add(createLabel("Choose Input B:"), 1, 0);
-		Slider sliderA = new Slider(0, 1, 0.5D);
-		sliderA.setMajorTickUnit(0.1);
-		sliderA.setShowTickLabels(true);
-		Slider sliderB = new Slider(0, 1, 0.5D);
-		sliderB.setMajorTickUnit(0.1);
-		sliderB.setShowTickLabels(true);
-		gridPane.add(sliderA, 0, 1);
-		gridPane.add(sliderB, 1, 1);
-		gridPane.add(createLabel("Result A:"), 0, 2);
-		gridPane.add(createLabel("Result B:"), 1, 2);
+
+		ToggleGroup groupA = new ToggleGroup();
+		RadioButton inputAfalse = new RadioButton("false");
+		inputAfalse.setUserData("false");
+		inputAfalse.setToggleGroup(groupA);
+		groupA.selectToggle(inputAfalse);
+		RadioButton inputAtrue = new RadioButton("true");
+		inputAtrue.setToggleGroup(groupA);
+		inputAtrue.setUserData("true");
+		groupA.selectedToggleProperty().addListener((ov, old_toggle, new_toggle) -> {
+			if (groupA.getSelectedToggle() != null) {
+				if ("false".equals(groupA.getSelectedToggle().getUserData().toString())) a = 0;
+				else a = 1;
+				printResult();
+			}});
+		gridPane.add(inputAfalse, 0, 1);
+		gridPane.add(inputAtrue, 0, 2);
+
+		ToggleGroup groupB = new ToggleGroup();
+		RadioButton inputBfalse = new RadioButton("false");
+		inputBfalse.setUserData("false");
+		inputBfalse.setToggleGroup(groupB);
+		groupB.selectToggle(inputBfalse);
+		RadioButton inputBtrue = new RadioButton("true");
+		inputBtrue.setToggleGroup(groupB);
+		inputBtrue.setUserData("true");
+		gridPane.add(inputBfalse, 1, 1);
+		gridPane.add(inputBtrue, 1, 2);
+		groupB.selectedToggleProperty().addListener((ov, old_toggle, new_toggle) -> {
+			if (groupB.getSelectedToggle() != null) {
+				if ("false".equals(groupB.getSelectedToggle().getUserData().toString())) b = 0;
+				else b = 1;
+				printResult();
+			}});
+
+		gridPane.add(createLabel("Result: "), 0, 4);
+
+
 		window.setScene(new Scene(gridPane));
 
 		window.setOnCloseRequest(t -> {
@@ -45,6 +80,12 @@ public class Main extends Application {
 		window.setResizable(false);
 		window.setFullScreen(false);
 		window.show();
+	}
+
+	private void printResult() {
+		gridPane.getChildren().remove(resultLabel);
+		resultLabel = createLabel(String.valueOf(Controller.xor(a, b)));
+		gridPane.add(resultLabel, 1, 4);
 	}
 
 	/**

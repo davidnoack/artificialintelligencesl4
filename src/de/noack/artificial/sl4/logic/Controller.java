@@ -1,25 +1,25 @@
 package de.noack.artificial.sl4.logic;
 
-import de.noack.artificial.sl4.model.Employee;
-import de.noack.artificial.sl4.model.Team;
+import de.noack.artificial.sl4.model.Neuron;
 
-public class Controller {
+public abstract class Controller {
 
-	private Team team;
-
-	public void initializeContext() {
-		team = new Team();
-
-		// Layer 0: Außendienst
-		team.addEmployee(new Employee("Eve", 0));
-		team.addEmployee(new Employee("Adam", 0));
-
-		// Layer 1: Arbeit
-		team.addEmployee(new Employee("Peter", 1));
-		team.addEmployee(new Employee("Sarah", 1));
-	}
-
-	public void sendSignal(double signal) {
-		team.sendExternalSignalToAllEmployees(signal);
+	public static boolean xor(int a, int b) {
+		Neuron inputA = new Neuron(0, a);
+		Neuron inputB = new Neuron(0, b);
+		
+		Neuron hiddenC = new Neuron(3, 0);
+		hiddenC.addInputNeuronWithWeight(inputA, -2);
+		hiddenC.addInputNeuronWithWeight(inputB, -2);
+		Neuron hiddenD = new Neuron(-1, 0);
+		
+		hiddenD.addInputNeuronWithWeight(inputA, 2);
+		hiddenD.addInputNeuronWithWeight(inputB, 2);
+		
+		Neuron output = new Neuron(-3, 0);
+		output.addInputNeuronWithWeight(hiddenC, 2);
+		output.addInputNeuronWithWeight(hiddenD, 2);
+		
+		return(output.isActive());
 	}
 }

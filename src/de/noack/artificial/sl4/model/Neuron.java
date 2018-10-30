@@ -1,27 +1,33 @@
 package de.noack.artificial.sl4.model;
 
-/**
- * Die Klasse Neuron stellt eine Nervenzelle dar.
- */
+import java.util.HashMap;
+import java.util.Map;
+
 public class Neuron {
+	private int threshold;
+	private int inputSignal;
+	private Map<Neuron, Integer> inputNeuronsWithWeights;
 
-	private double state; // Zwischen 0 und 1
-	private Soma soma;
-	private Axon axon;
-	private int layer;
-
-	public Neuron(int layer, double threshold) {
-		state = 0;
-		this.soma = new Soma(this, threshold);
-		this.axon = new Axon();
-		this.layer = layer;
+	public Neuron(int threshold, int inputSignal) {
+		this.threshold = threshold;
+		this.inputSignal = inputSignal;
+		inputNeuronsWithWeights = new HashMap<>();
 	}
 
-	public void sendSignalIfThresholdExceeded(double signal) {
-		if(soma.sumOfWeightsExceedsThreshold()) axon.sendSignal(signal);
+	public void addInputNeuronWithWeight(Neuron n, int weight) {
+		inputNeuronsWithWeights.put(n, weight);
 	}
 
-	public Soma getSoma() {
-		return soma;
+	public boolean isActive() {
+		for (Map.Entry<Neuron, Integer> inputNeuronWithWeight : inputNeuronsWithWeights.entrySet()) {
+			if (inputNeuronWithWeight.getKey().isActive()) {
+				inputSignal += inputNeuronWithWeight.getKey().inputSignal * inputNeuronWithWeight.getValue();
+			}
+		}
+		if(inputSignal + threshold > 0) {
+			inputSignal = 1;
+			return true;
+		}
+		return false;
 	}
 }
