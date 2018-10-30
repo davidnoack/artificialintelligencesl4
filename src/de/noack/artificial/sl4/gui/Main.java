@@ -13,9 +13,15 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
+/**
+ * Oberfläche der Anwendung bestehend aus zwei Eingabefeldern mit je zwei Radio-Buttons
+ * (true oder false), sowie Ergebnisanzeige der XOR-Operation
+ */
 public class Main extends Application {
 
 	private Stage window;
+
+	// Ergebnisanzeige
 	private Label resultLabel = new Label("");
 	GridPane gridPane = new GridPane();
 	private int a = 0;
@@ -31,9 +37,12 @@ public class Main extends Application {
 		window = primaryStage;
 		window.setTitle("XOR");
 
+		// Eingabeaufforderung
 		gridPane.add(createLabel("Choose Input A:"), 0, 0);
 		gridPane.add(createLabel("Choose Input B:"), 1, 0);
 
+		// -----------------------------------------------------------------------------------
+		// Erster Eingabeparameter der XOR Operation (true oder false für A)
 		ToggleGroup groupA = new ToggleGroup();
 		RadioButton inputAfalse = new RadioButton("false");
 		inputAfalse.setUserData("false");
@@ -50,7 +59,10 @@ public class Main extends Application {
 			}});
 		gridPane.add(inputAfalse, 0, 1);
 		gridPane.add(inputAtrue, 0, 2);
+		// -----------------------------------------------------------------------------------
 
+		// -----------------------------------------------------------------------------------
+		// Erster Eingabeparameter der XOR Operation (true oder false für A)
 		ToggleGroup groupB = new ToggleGroup();
 		RadioButton inputBfalse = new RadioButton("false");
 		inputBfalse.setUserData("false");
@@ -69,6 +81,7 @@ public class Main extends Application {
 			}});
 
 		gridPane.add(createLabel("Result: "), 0, 4);
+		// -----------------------------------------------------------------------------------
 
 
 		window.setScene(new Scene(gridPane));
@@ -82,6 +95,9 @@ public class Main extends Application {
 		window.show();
 	}
 
+	/**
+	 * Schreibt das ermittelte Ergebnis auf die Oberfläche
+	 */
 	private void printResult() {
 		gridPane.getChildren().remove(resultLabel);
 		resultLabel = createLabel(String.valueOf(Controller.xor(a, b)));

@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="artificialintelligencesl4:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/artificialintelligencesl4_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/gui/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/logic/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/logic/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Axon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Dendrit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Employee.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Neuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Neuron.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Soma.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Synapse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/Team.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl4/de/noack/artificial/sl4/model/WeightMatrix.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl4/gui/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/logic/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl4/logic/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Axon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Dendrit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Employee.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Neuron.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Neuron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Soma.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Synapse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Team.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/WeightMatrix.java" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,12 +95,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="java" value="6731" />
+          <entry key="java" value="8266" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6731" />
+          <entry key="JAVA" value="8266" />
           <entry key="PLAIN_TEXT" value="7" />
         </counts>
       </usages-collector>
@@ -133,11 +125,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/gui/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1166">
-              <caret line="86" column="72" lean-forward="true" selection-start-line="86" selection-start-column="72" selection-end-line="86" selection-end-column="72" />
+            <state relative-caret-position="1132">
+              <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
             </state>
           </provider>
         </entry>
@@ -145,21 +137,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/logic/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="508">
+              <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Neuron.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+            <state relative-caret-position="969">
+              <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,9 +191,9 @@
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Team.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/NeuralConnection.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/NeuronalConnection.java" />
+        <option value="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Neuron.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl4/logic/Controller.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl4/gui/Main.java" />
-        <option value="$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Neuron.java" />
       </list>
     </option>
   </component>
@@ -213,11 +204,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1416" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1035" />
+    <option name="y" value="-24" />
+    <option name="width" value="644" />
+    <option name="height" value="699" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -428,8 +419,11 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540917152694" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540923530818" />
     <property name="dynamic.classpath" value="false" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
@@ -557,18 +551,18 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1540719817836" duration="11006000" />
       <workItem from="1540799599403" duration="14206000" />
-      <workItem from="1540913935972" duration="3177000" />
+      <workItem from="1540913935972" duration="7409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29691000" />
+    <option name="totallyTimeSpent" value="33923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1581876" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.104928456" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -578,7 +572,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299532" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32917318" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937598" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -674,31 +668,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/gui/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Neuron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="86" column="72" lean-forward="true" selection-start-line="86" selection-start-column="72" selection-end-line="86" selection-end-column="72" />
+        <state relative-caret-position="969">
+          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <folding>
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/logic/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="508">
+          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/model/Neuron.java">
+    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl4/gui/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1132">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>artificialintelligencesl4:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>artificialintelligencesl4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
